@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Steps to get it running:
+- Clone the repository
+- Set 'MYSQL_ROOT_PASSWORD' as your environment variable
+- Install Gems 
+- Run migration
+- Start server
 
-Things you may want to cover:
+### Gems used:
 
-* Ruby version
+1) Bcrypt - to use ActiveModel's has_secure_password / to store password securely
+2) Rack Cors - to enable cross domain requests
+3) JWT - to use JWT mechanism to authenticate users
+4) Fast jsonapi - To serialize json data with only necessary attributes
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### References:
+https://dev.to/alexmercedcoder/ruby-on-rails-api-with-jwt-auth-tutorial-go2
