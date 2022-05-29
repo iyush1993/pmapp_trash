@@ -49,7 +49,7 @@ class V1::ProjectsController < ApplicationController
     project = Project.find(params[:id])
     if project.present?
       project.destroy
-      render json: { message: "Project deleted" }, status: :ok
+      head :no_content
     else
       render json: { error: "Project not found" }, status: :not_found
     end 
