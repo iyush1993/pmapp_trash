@@ -16,6 +16,10 @@
 5) Shoulda matchers - to import helpful rails matchers for validations and associations
 6) Rspec - to use as a test framework
 
+### Todos:
+- Dockerize application
+- Test cases for all models and controllers
+
 
 ### References:
 https://dev.to/alexmercedcoder/ruby-on-rails-api-with-jwt-auth-tutorial-go2
