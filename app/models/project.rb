@@ -8,5 +8,4 @@ class Project < ApplicationRecord
   validates :location, presence: true
   enum project_type: { in_house: 0, external: 1, international: 2 }
 
-
 end

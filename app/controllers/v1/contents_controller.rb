@@ -27,6 +27,16 @@ class V1::ContentsController < ApplicationController
     head :no_content
   end
 
+  def update
+    content = Content.find(params[:id])
+    if content.present?
+      content.update(content_params)
+      render json: ContentSerializer.new(content).serialized_json, status: :ok
+    else
+      render json: { error: "Content not found" }, status: :not_found
+    end
+  end
+
   private
 
   def content_params

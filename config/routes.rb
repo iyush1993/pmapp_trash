@@ -1,17 +1,15 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  #resource :users, only: [:create]
-  post "/login", to: "users#login"
-  get "/auto_login", to: "users#auto_login"
 
   namespace :v1 do 
-
+    
     resources :projects, only: [:create, :show, :update, :destroy] do
-      resources :contents, only: [:index, :create, :show, :update, :destroy]
+      resources :contents, only: [:index, :create, :show]
       collection do
         get :my_projects
       end
     end
+    
+    resources :contents, only: [:update, :destroy]
 
     match '/projects', to: 'projects#index', via: [:get, :post]
 
